@@ -16,8 +16,9 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [true, "password is required"],
-    }
-})
+    },
+}, { timestamps: true }
+)
 
 const userModel = mongoose.model("users", userSchema)
 export default userModel
